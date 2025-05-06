@@ -62,6 +62,11 @@ add: ensure-token
 	UV_INDEX_FERN_LABOUR_PACKAGES_PASSWORD=${TOKEN} \
 	uv add $(dep)
 
+deps: ensure-token
+	UV_INDEX_FERN_LABOUR_PACKAGES_USERNAME=oauth2accesstoken \
+	UV_INDEX_FERN_LABOUR_PACKAGES_PASSWORD=${TOKEN} \
+	uv sync --all-groups --frozen
+
 # Source code formatting and linting
 .PHONY: format \
 		lint
