@@ -1,7 +1,8 @@
 from dataclasses import dataclass
-from typing import Any, Protocol, Self
+from typing import Any, Protocol, Self, runtime_checkable
 
 
+@runtime_checkable
 class BaseNotificationData(Protocol):
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Self: ...
