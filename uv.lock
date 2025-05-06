@@ -83,9 +83,21 @@ wheels = [
 ]
 
 [[package]]
-name = "fern-labour-notifications-shared"
+name = "fern-labour-core"
 version = "0.1.0"
+source = { registry = "https://europe-west2-python.pkg.dev/valued-vault-446719-t7/fern-labour-packages/simple/" }
+sdist = { url = "https://europe-west2-python.pkg.dev/valued-vault-446719-t7/fern-labour-packages/fern-labour-core/fern_labour_core-0.1.0.tar.gz", hash = "sha256:df5a9c7575c3bccbd086562d913c4b5048c8741c7776b301d100c7fd6c1cfee2" }
+wheels = [
+    { url = "https://europe-west2-python.pkg.dev/valued-vault-446719-t7/fern-labour-packages/fern-labour-core/fern_labour_core-0.1.0-py3-none-any.whl", hash = "sha256:e04457544fb83d159162940877fc4f13a2c87256298d60311aa0470cf5e55f84" },
+]
+
+[[package]]
+name = "fern-labour-notifications-shared"
+version = "0.1.2"
 source = { editable = "." }
+dependencies = [
+    { name = "fern-labour-core" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -101,6 +113,7 @@ test = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "fern-labour-core", specifier = ">=0.1.0", index = "https://europe-west2-python.pkg.dev/valued-vault-446719-t7/fern-labour-packages/simple/" }]
 
 [package.metadata.requires-dev]
 dev = [
