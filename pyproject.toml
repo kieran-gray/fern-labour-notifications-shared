@@ -1,7 +1,7 @@
 [project]
 classifiers = ["Private :: Do Not Upload"]
 name = "fern-labour-notifications-shared"
-version = "0.1.3"
+version = "0.2.0"
 description = "Shared Kernel library for notification content shared between Fern Labour Services."
 readme = "README.md"
 authors = [

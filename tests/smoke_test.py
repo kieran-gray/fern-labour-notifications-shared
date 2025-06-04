@@ -16,7 +16,7 @@ def can_instantiate_notification_data_type() -> None:
 
 
 def can_instantiate_event() -> None:
-    event = NotificationRequested.create(data={})
+    event = NotificationRequested.create(aggregate_id="test", aggregate_type="test", data={})
     if not event:
         raise RuntimeError("Event instantiation failed.")
     print("Instantiated Event successfully.")
