@@ -4,7 +4,7 @@ from typing import Any, Self
 from fern_labour_core.events.event import DomainEvent
 
 
-@dataclass(frozen=True)
+@dataclass
 class NotificationRequested(DomainEvent):
     @classmethod
     def create(
